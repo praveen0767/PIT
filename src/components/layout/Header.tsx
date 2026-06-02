@@ -18,7 +18,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
+  type NavLink = {
+    name: string;
+    href: string;
+    sublinks?: { name: string; href: string }[];
+  };
+
+  const navLinks: NavLink[] = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Capabilities", href: "/services" },
