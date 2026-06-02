@@ -24,7 +24,7 @@ export function TrustStrip() {
 
   return (
     <div className="surface-1 relative z-20">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-pit-dark border-y border-pit-dark">
           {stats.map((stat, i) => (
             <motion.div
@@ -48,3 +48,4 @@ export function TrustStrip() {
     </div>
   );
 }
+

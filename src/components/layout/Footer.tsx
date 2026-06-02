@@ -1,59 +1,68 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
-import { Shield, MapPin, Mail, ChevronRight } from "lucide-react";
+import { MapPin, Mail, Phone, ChevronRight } from "lucide-react";
+
+const LinkedinIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
+
+const InstagramIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
 
 export function Footer() {
   return (
-    <footer className="bg-pit-black pt-24 pb-12 relative overflow-hidden text-pit-offwhite border-t border-pit-cyan/20 shadow-[0_-10px_40px_rgba(0,166,200,0.05)]">
-      {/* Layered Background */}
-      <div className="absolute inset-0 bg-grid-pit opacity-[0.03] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-pit-cyan opacity-10 blur-[120px] pointer-events-none rounded-t-full"></div>
-
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-20">
+    <footer className="surface-charcoal border-t-[4px] border-[var(--color-navy-deep)] pt-20 pb-10">
+      <div className="container mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-16">
           
-          {/* Column 1: Brand & Intelligence Statement */}
-          <div className="md:col-span-4 lg:col-span-5">
-            <Link href="/" className="flex items-center gap-5 group mb-10 inline-flex">
-              <div className="relative w-14 h-14 overflow-hidden rounded-sm bg-pit-white/5 border border-pit-white/10 p-1.5 group-hover:border-pit-cyan/50 group-hover:shadow-[0_0_15px_rgba(0,166,200,0.3)] transition-all duration-300">
-                <Image
-                  src="/main_logo.png"
-                  alt="PIT Logo"
-                  fill
-                  className="object-contain"
-                  sizes="56px"
-                />
+          <div className="md:col-span-5 lg:col-span-5">
+            <Link href="/" className="flex items-center gap-4 mb-6 group shrink-0">
+              <div className="relative flex items-center justify-center p-1 rounded-sm border border-[rgba(255,255,255,0.05)] bg-[rgba(255,255,255,0.02)] shadow-sm">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/main_logo.png" alt="PIT Logo" className="w-10 h-10 object-contain group-hover:scale-105 transition-transform duration-300" />
               </div>
-              <div className="flex flex-col border-l-2 border-pit-dark pl-5 py-1 group-hover:border-pit-cyan/50 transition-colors duration-300">
-                <span className="font-bold text-2xl tracking-tight text-pit-white leading-none">
+              <div className="flex flex-col">
+                <span className="font-serif font-bold text-2xl tracking-tight text-white leading-none">
                   PIT
                 </span>
-                <span className="text-[10px] font-bold text-pit-cyan uppercase tracking-[0.3em] mt-2 opacity-80">
+                <span className="text-[10px] font-sans font-bold text-pit-cyan uppercase tracking-widest mt-1">
                   Political Intelligence
                 </span>
               </div>
             </Link>
-            
-            <div className="surface-2 border border-pit-white/5 p-6 rounded-sm relative overflow-hidden group max-w-md">
-              <div className="absolute top-0 left-0 w-1 h-full bg-pit-cyan"></div>
-              <h4 className="flex items-center gap-2 text-[10px] font-bold text-pit-cyan uppercase tracking-widest mb-3">
-                <Shield className="w-3 h-3" />
-                Intelligence Protocol
-              </h4>
-              <p className="text-sm leading-relaxed text-pit-offwhite opacity-70 font-light">
-                We synthesize fragmented demographic data, voter sentiment, and ground-level intelligence into structured, executable political power. Decisions driven by data, not intuition.
-              </p>
+            <p className="text-sm leading-relaxed pr-6 text-[rgba(255,255,255,0.7)] max-w-sm mb-6">
+              The premier intelligence and strategic advisory institution. We engineer certainty in highly volatile political ecosystems through data-driven architectural execution.
+            </p>
+            <div className="flex items-center gap-4 text-[rgba(255,255,255,0.7)]">
+              <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors p-2 -ml-2 rounded-full hover:bg-[rgba(255,255,255,0.05)]">
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
+              <a href="#" aria-label="Instagram" className="hover:text-white transition-colors p-2 rounded-full hover:bg-[rgba(255,255,255,0.05)]">
+                <InstagramIcon className="w-5 h-5" />
+              </a>
             </div>
           </div>
-          
-          {/* Column 2: Capabilities */}
-          <div className="md:col-span-3 lg:col-span-2">
-            <h4 className="font-bold mb-6 text-pit-white text-[11px] uppercase tracking-[0.2em] border-b border-pit-white/10 pb-4">Capabilities</h4>
+
+          <div className="md:col-span-4 lg:col-span-3 lg:col-start-7">
+            <h4 className="font-sans font-bold text-xs uppercase tracking-widest text-white mb-6 flex items-center gap-2">
+              <div className="w-4 h-[1px] bg-[var(--color-gold)]"></div>
+              Divisions
+            </h4>
             <ul className="space-y-4">
-              {['Strategy & Planning', 'Field Operations', 'Narrative Architecture', 'Sentiment Research'].map((item) => (
+              {['Political Analysis', 'Public Opinion Research', 'Campaign Strategy', 'Proof of Work'].map((item) => (
                 <li key={item}>
-                  <Link href="#services" className="text-sm text-pit-offwhite opacity-70 hover:opacity-100 hover:text-pit-cyan transition-all flex items-center gap-2 group">
-                    <ChevronRight className="w-3 h-3 text-pit-dark group-hover:text-pit-cyan transition-colors" />
+                  <Link href={item === 'Proof of Work' ? '/proof' : `/services#${item.toLowerCase().split(' ')[0]}`} className="text-sm text-[rgba(255,255,255,0.7)] hover:text-white transition-colors font-medium flex items-center group">
+                    <ChevronRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all text-[var(--color-gold)]" />
                     {item}
                   </Link>
                 </li>
@@ -61,62 +70,39 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Insights */}
-          <div className="md:col-span-2 lg:col-span-2">
-            <h4 className="font-bold mb-6 text-pit-white text-[11px] uppercase tracking-[0.2em] border-b border-pit-white/10 pb-4">Insights</h4>
-            <ul className="space-y-4">
-              {['Methodology', 'Representative Impact', 'Research Briefs', 'Confidential Briefings'].map((item) => (
-                <li key={item}>
-                  <Link href="#methodology" className="text-sm text-pit-offwhite opacity-70 hover:opacity-100 hover:text-pit-cyan transition-all flex items-center gap-2 group">
-                    <ChevronRight className="w-3 h-3 text-pit-dark group-hover:text-pit-cyan transition-colors" />
-                    {item}
-                  </Link>
-                </li>
-              ))}
+          <div className="md:col-span-3 lg:col-span-3">
+            <h4 className="font-sans font-bold text-xs uppercase tracking-widest text-white mb-6 flex items-center gap-2">
+              <div className="w-4 h-[1px] bg-[var(--color-gold)]"></div>
+              Headquarters
+            </h4>
+            <ul className="space-y-5">
+              <li className="flex items-start gap-3 text-sm text-[rgba(255,255,255,0.7)]">
+                <MapPin className="w-4 h-4 text-[var(--color-gold)] shrink-0 mt-0.5" />
+                <span>Executive Office,<br/>New Delhi, India</span>
+              </li>
+              <li className="flex items-center gap-3 text-sm text-[rgba(255,255,255,0.7)]">
+                <Mail className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                <a href="mailto:contact@pit-consulting.com" className="hover:text-white transition-colors">contact@pit-consulting.com</a>
+              </li>
+              <li className="flex items-center gap-3 text-sm text-[rgba(255,255,255,0.7)]">
+                <Phone className="w-4 h-4 text-[var(--color-gold)] shrink-0" />
+                <span>+91 98765 43210</span>
+              </li>
             </ul>
           </div>
           
-          {/* Column 4: Contact & Regional Coverage */}
-          <div className="md:col-span-3 lg:col-span-3">
-            <h4 className="font-bold mb-6 text-pit-white text-[11px] uppercase tracking-[0.2em] border-b border-pit-white/10 pb-4">Command Centers</h4>
-            <ul className="space-y-6">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-pit-cyan mt-1" />
-                <div>
-                  <span className="block text-[10px] font-bold text-pit-offwhite opacity-50 uppercase tracking-widest mb-1">Regional Coverage</span>
-                  <p className="text-sm text-pit-white leading-relaxed">East Godavari<br/>West Godavari</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-pit-cyan mt-1" />
-                <div>
-                  <span className="block text-[10px] font-bold text-pit-offwhite opacity-50 uppercase tracking-widest mb-1">Secure Contact</span>
-                  <a href="mailto:contact@politicalintelligence.team" className="text-sm text-pit-white hover:text-pit-cyan transition-colors">contact@politicalintelligence.team</a>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
         
-        {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-pit-white/5 gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)] animate-pulse"></div>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-pit-offwhite opacity-50">
-              Network Secure &bull; All Systems Nominal
-            </p>
-          </div>
-          
-          <p className="text-xs text-pit-offwhite opacity-40 order-3 md:order-2 text-center">
-            &copy; {new Date().getFullYear()} Political Intelligence Team. All rights reserved. Strict Confidentiality Maintained.
-          </p>
-
-          <div className="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-pit-offwhite opacity-50 order-2 md:order-3">
-            <Link href="#" className="hover:text-pit-cyan transition-colors">Privacy Protocol</Link>
-            <Link href="#" className="hover:text-pit-cyan transition-colors">Terms of Engagement</Link>
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[rgba(255,255,255,0.1)] text-xs text-[rgba(255,255,255,0.5)]">
+          <p>&copy; {new Date().getFullYear()} Political Intelligence Team. Confidential and Proprietary.</p>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-white transition-colors">Secure Login</Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+

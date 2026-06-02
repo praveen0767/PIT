@@ -28,7 +28,7 @@ export function InsightsSection() {
 
   return (
     <section id="insights" className="py-24 surface-1 border-y border-pit-dark relative">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 border-b border-pit-dark pb-8">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-pit-white mb-4">
@@ -79,3 +79,4 @@ export function InsightsSection() {
     </section>
   );
 }
+

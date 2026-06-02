@@ -10,8 +10,8 @@ import { Label } from "@/components/ui/label";
 export function ContactSection() {
   return (
     <section id="contact" className="py-24 surface-1 relative">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,3 +122,4 @@ export function ContactSection() {
     </section>
   );
 }
+

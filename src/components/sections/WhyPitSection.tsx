@@ -28,7 +28,7 @@ export function WhyPitSection() {
 
   return (
     <section id="why-pit" className="py-24 surface-1 relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8 relative z-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
         <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-pit-white">
             The PIT Advantage
@@ -59,3 +59,4 @@ export function WhyPitSection() {
     </section>
   );
 }
+

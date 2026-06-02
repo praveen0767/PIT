@@ -82,7 +82,7 @@ export function MapSection() {
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-grid-pit opacity-5 pointer-events-none"></div>
       
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-pit-white/5 border border-pit-white/10 rounded-full mb-6">
             <Radio className="w-3 h-3 text-pit-cyan animate-pulse" />
@@ -96,7 +96,7 @@ export function MapSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-8">
           
           {/* LEFT PANEL: Tactical Controls */}
           <div className="lg:col-span-4 flex flex-col gap-4">
@@ -317,3 +317,4 @@ export function MapSection() {
     </section>
   );
 }
+

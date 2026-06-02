@@ -17,7 +17,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       default: "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-sm", // Political Blue
       accent: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm", // Saffron
       secondary: "bg-slate-100 text-slate-900 hover:bg-slate-200",
-      outline: "border border-slate-300 bg-white hover:bg-slate-50 hover:text-slate-900 shadow-sm",
+      outline: "border border-slate-300 bg-pit-black hover:bg-slate-50 hover:text-slate-900 shadow-sm",
       ghost: "hover:bg-slate-100 hover:text-slate-900",
       link: "text-secondary underline-offset-4 hover:underline",
     }
@@ -46,3 +46,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { Button }
+
