@@ -22,7 +22,7 @@ const InstagramIcon = ({ className }: { className?: string }) => (
 export function TeamSection() {
   const founders = [
     {
-      name: "Pavan",
+      name: "Mathi Pavan",
       role: "Founder & Chief Strategist",
       image: "/photos/pavan.jpeg",
       social: {
@@ -30,7 +30,7 @@ export function TeamSection() {
         instagram: "#",
       },
       quote: "\"Hope is not a strategy. We engineer absolute certainty.\"",
-      description: "The primary architect behind PIT's macro-electoral models. Pavan specializes in deploying rapid-response containment strategies and structural blueprints during periods of critical institutional vulnerability. He oversees all top-level strategic architecture and intelligence integration."
+      description: "The primary architect behind PIT's macro-electoral models. Mathi Pavan specializes in deploying rapid-response containment strategies and structural blueprints during periods of critical institutional vulnerability. He oversees all top-level strategic architecture and intelligence integration."
     },
     {
       name: "Praveen Srinivasan",

@@ -58,7 +58,7 @@ export function FoundingMindsPreview() {
 
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-serif font-bold text-3xl text-pit-white">
-                    Pavan
+                    Mathi Pavan
                   </h3>
                   <div className="flex gap-3 text-white/70 opacity-0 group-hover:opacity-100 transition-opacity">
                     <a href="#" className="hover:text-pit-cyan transition-colors" onClick={(e) => e.stopPropagation()} aria-label="LinkedIn">
@@ -76,7 +76,7 @@ export function FoundingMindsPreview() {
                   "Hope is not a strategy. We engineer absolute certainty."
                 </p>
                 <p className="text-white/70 leading-relaxed text-sm">
-                  The primary architect behind PIT's macro-electoral models. Pavan specializes in deploying rapid-response containment strategies and structural blueprints during periods of critical institutional vulnerability.
+                  The primary architect behind PIT's macro-electoral models. Mathi Pavan specializes in deploying rapid-response containment strategies and structural blueprints during periods of critical institutional vulnerability.
                 </p>
               </div>
               <div className="mt-8 pt-6 border-t border-white/5">
